@@ -8,4 +8,5 @@ import (
 
 func Setup(app *fiber.App){
 	app.Post("",controllers.PostUri)
+	app.Get("",controllers.HealthCheck)
 }
