@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"proxypi/routes"
 
 	"github.com/gofiber/fiber/v2"
@@ -9,6 +10,6 @@ import (
 func main() {
 	app := fiber.New()
 	routes.Setup(app)
-
-	app.Listen(":3031")
+	port := os.Getenv("PORT")
+	app.Listen(":"+port)
 }
