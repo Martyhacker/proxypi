@@ -7,6 +7,7 @@ import (
 )
 
 func Setup(app *fiber.App){
-	app.Post("",controllers.PostUri)
+	app.Post("uri",controllers.PostUri)
+	app.Get("site",controllers.ProxySite)
 	app.Get("",controllers.HealthCheck)
 }
