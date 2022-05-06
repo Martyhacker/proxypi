@@ -1,6 +1,7 @@
 module proxypi
 
 go 1.18
+// +heroku goVersion go1.15
 
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
